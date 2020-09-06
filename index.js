@@ -1,11 +1,12 @@
 const express = require('express') ///express -> servidor web
 const postgres = require('postgres')
 const cors = require('cors')
+require('dotenv').config()
 
 const app = express()
 app.use(cors())
 
-const sql = postgres('postgres://lojaslime:2733@localhost:5432/lojaslime')
+const sql = postgres(process.env.DATABASE_URL)
 
 app.get('/', async function(req, res) {
     res.send('Endpoint disponiveis: /produtos')
