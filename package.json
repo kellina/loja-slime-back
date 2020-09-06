@@ -8,8 +8,8 @@
     "private": false,
     "scripts": {
         "startdev": "nodemon index.js",
-        "start": "pm2 start index.js",
-        "stop": "pm2 stop stop 0"
+        "start": "pm2 start index.js --name lojas-slime-backend",
+        "stop": "pm2 stop stop lojas-slime-backend"
     },
     "dependencies": {
         "cors": "^2.8.5",
