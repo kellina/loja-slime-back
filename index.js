@@ -26,6 +26,6 @@ app.get('/produtos', async function(req, res) {
 //     res.send("lista de clientes")
 // })
 
-app.listen(80, function() {
+app.listen(3001, function() {
     console.log('O servidor está funcionando. Ouvindo conexões na porta 3001.')
 })
