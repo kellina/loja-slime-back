@@ -7,10 +7,12 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "startdev": "nodemon index.js",
-        "start": "pm2-runtime start index.js ecosystem.config.js --env production"
+        "start": "nodemon index.js",
+        "startprod": "pm2-runtime start index.js ecosystem.config.js --env production",
+        "format": "prettier --write ."
     },
     "dependencies": {
+        "ajax": "0.0.4",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
@@ -18,6 +20,14 @@
         "postgres": "^1.0.2"
     },
     "devDependencies": {
-        "nodemon": "^2.0.4"
+        "husky": "^4.3.6",
+        "nodemon": "^2.0.4",
+        "prettier": "2.2.1",
+        "pretty-quick": "^3.1.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
     }
 }
