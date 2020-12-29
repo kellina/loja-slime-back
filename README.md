@@ -96,5 +96,3 @@ Check out the [contributing](https://github.com/kellina/loja-slime-back/blob/mas
 
 Released in 2020.
 This project is under the [MIT license](https://github.com/kellina/loja-slime-back/blob/master/LICENSE).
-
-Made with love by [Kellina Oliveira](https://github.com/kellina) :two_hearts: :rocket:

@@ -2,17 +2,18 @@
     "name": "loja-slime-backend",
     "version": "1.0.0",
     "description": "backend da loja de slime",
-    "main": "index.js",
+    "main": "server.js",
     "author": "kellina e paulo",
     "license": "MIT",
     "private": false,
     "scripts": {
-        "start": "nodemon index.js",
-        "startprod": "pm2-runtime start index.js ecosystem.config.js --env production",
+        "start": "nodemon src/server.js",
+        "startprod": "pm2-runtime start server.js ecosystem.config.js --env production",
         "format": "prettier --write ."
     },
     "dependencies": {
         "ajax": "0.0.4",
+        "body-parser": "^1.19.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
@@ -20,6 +21,9 @@
         "postgres": "^1.0.2"
     },
     "devDependencies": {
+        "eslint": "^7.16.0",
+        "eslint-config-prettier": "^7.1.0",
+        "eslint-plugin-prettier": "^3.3.0",
         "husky": "^4.3.6",
         "nodemon": "^2.0.4",
         "prettier": "2.2.1",

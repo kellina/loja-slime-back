@@ -24,7 +24,7 @@ A [pull request](https://docs.github.com/en/github/collaborating-with-issues-and
 
 If you encounter a problem with this project, please open an issue. Be sure to include:
 
-- Package version
-- Node and Express versions
-- Brief but thorough description of the issue
-- Link to a CodeSandbox (or similar) demonstrating the problem (optional, but highly recommended, especially for complex problems)
+-   Package version
+-   Node and Express versions
+-   Brief but thorough description of the issue
+-   Link to a CodeSandbox (or similar) demonstrating the problem (optional, but highly recommended, especially for complex problems)
