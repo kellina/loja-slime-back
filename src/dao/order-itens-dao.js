@@ -10,8 +10,22 @@ async function insertItem(orderItem) {
     return insertedItem
 }
 
-async function listOrderItems(order_id) {
-    const listCart = await sql`select * from order_items where order_id=${order_id}`
+async function listOrderItems(userId) {
+    const listCart = await sql`
+    SELECT
+    prod.image,
+    prod.name,
+    prod.description,
+    prod.price,
+    item.quantity
+  FROM
+    order_items item
+    INNER JOIN products prod ON (item.product_id = prod.id)
+    INNER JOIN orders ord ON (item.order_id = ord.id)
+    INNER JOIN users usr ON (ord.user_id = usr.id)
+  WHERE usr.uuid = ${userId}
+  ORDER BY prod.id;      
+    `
     return listCart
 }
 

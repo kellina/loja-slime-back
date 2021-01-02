@@ -5,7 +5,7 @@ const orderItemDao = require('./dao/order-itens-dao')
 
 function initRoutes(app) {
     app.get('/', async function (req, res) {
-        res.send('Endpoint disponiveis: /produtos')
+        res.send('Endpoint disponivel: /products')
     })
 
     app.get('/products', async function (req, res) {
@@ -20,6 +20,7 @@ function initRoutes(app) {
 
     app.put('/cart', async function (req, res) {
         const { user_id, product_id, qty } = req.body
+
         let user = await userDao.findByUUID(user_id)
         if (user == null) {
             user = await userDao.insert({ uuid: user_id })
@@ -49,10 +50,10 @@ function initRoutes(app) {
         res.send(deleteItem)
     })
 
-    app.get('/cart/:id', async function (req, res) {
-        const order_id = req.params.id
-        const list_cart = await orderItemDao.listOrderItems(order_id)
-        res.send(list_cart)
+    app.get('/cart/:userId', async function (req, res) {
+        const userId = req.params.userId
+        const listCart = await orderItemDao.listOrderItems(userId)
+        res.send(listCart)
     })
 }
 
