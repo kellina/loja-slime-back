@@ -26,7 +26,7 @@
 ## :heavy_check_mark: Project Status
 
 <p align="center">
-  :construction: Slime Shop backend :construction: Under construction :construction:
+  :construction: Slime Shop backend :heavy_check_mark: Done :heavy_check_mark:
 </p>
 
 ## :rocket: Features
