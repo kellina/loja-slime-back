@@ -13,6 +13,8 @@ async function insertItem(orderItem) {
 async function listOrderItems(userId) {
     const listCart = await sql`
     SELECT
+    ord.id as cartId,
+    prod.id as productId,
     prod.image,
     prod.name,
     prod.description,

@@ -43,10 +43,10 @@ function initRoutes(app) {
         res.send(deletedItems)
     })
 
-    app.delete('/cart/:cart_id/item/:product_id', async function (req, res) {
-        const cart_id = req.params.cart_id
-        const product_id = req.params.product_id
-        const deleteItem = await orderItemDao.deleteItem(product_id, cart_id)
+    app.delete('/cart/:cartId/item/:productId', async function (req, res) {
+        const cartId = req.params.cartId
+        const productId = req.params.productId
+        const deleteItem = await orderItemDao.deleteItem(productId, cartId)
         res.send(deleteItem)
     })
 
